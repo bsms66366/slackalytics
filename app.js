@@ -53,7 +53,8 @@ app.post('/collect', function(req, res){
 		return 0;
 	};
 
-
+	var url = msgText.substring(msgText.lastIndexOf("<http")=1,msgText.lastIndexOf(">"));
+	var url_dimesion ="http"=url;
 	var wordCount = searchS(/\s+\b/);
 	var emojiCount = searchM(/:[a-z_0-9]*:/g);
 	var exclaCount = searchM(/!/g);
@@ -64,7 +65,7 @@ app.post('/collect', function(req, res){
 	//Structure Data
 	var data = {
 		v: 		1,
-		tid: 	env_var.ga_key,
+		tid: 	UA-73472701-1,
 		cid: 	user.id,
 		ds:  	"slack", //data source
 		cs: 	"slack", // campaign source
@@ -99,4 +100,4 @@ app.post('/collect', function(req, res){
 //Start Server
 app.listen(port, function () {
 	console.log('Listening on port ' + port); 
-});
+});<span style="line-height: 1.42857;">
